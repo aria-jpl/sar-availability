@@ -51,7 +51,7 @@ def gen_acq_dict(acq):
         #end = (dateutil.parser.parse(start) + datetime.timedelta(seconds=60)).strftime('%Y-%m-%dT%H:%M:%SZ')
         end = start
         endtime = starttime
-    track = walk(acq, 'trackNumber')
+    track = walk(acq, 'track_number')
     location = walk(acq, 'continent')
     status = walk(acq, 'status')
     if status:

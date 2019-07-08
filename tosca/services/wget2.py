@@ -75,7 +75,7 @@ def gen_acq_dict(acq):
     if dateutil.parser.parse(start) > dateutil.parser.parse(end):
         end = start
         endtime = starttime
-    track = walk(acq, 'trackNumber')
+    track = walk(acq, 'track_number')
     location = walk(acq, 'continent')
     status = walk(acq, 'status')
     if status:

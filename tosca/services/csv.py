@@ -50,7 +50,7 @@ def get_csv(dataset=None):
                            ('platform', 'metadata.platform'),
                            ('sensor', 'metadata.instrumentshortname'), 
                            ('orbit', 'metadata.orbitNumber'),
-                           ('track', 'metadata.trackNumber'),
+                           ('track', 'metadata.track_number'),
                            ('mode', 'metadata.sensoroperationalmode'),
                            ('direction', 'metadata.direction'),
                            ('polarisation', 'metadata.polarisationmode'),

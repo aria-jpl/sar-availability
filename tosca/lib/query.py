@@ -30,6 +30,10 @@ def query(index, query_str):
         if '_source' in hit: hit.setdefault('fields', {}).update(hit['_source'])
         hit['fields']['es_index'] = hit['_index']
 
+        # handle renamed metadata
+        if 'track_number' not in hit.get('fields', {}).get('metadata', {}):
+            hit['fields']['metadata']['track_number'] = hit['fields']['metadata'].get('trackNumber', '')
+
         # set dap url
         set_dap_url(hit)
 

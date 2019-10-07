@@ -144,10 +144,9 @@ def get_loc_string(acq):
 
 def build_loc_name(item):
     '''builds the location name from the item'''
-    local = "" if item['admin2_name'] is None else item['admin2_name']
-    region = "" if item['admin1_name'] is None else item['admin1_name']
-    country = "" if item['country_name'] is None else item['country_name']
-    loc_str = ""
+    local = item['admin2_name']
+    region = item['admin1_name']
+    country = item['country_name']
     if local:
         loc_str = '{}, {}, {}'.format(local.encode('ascii', 'ignore'), region.encode('ascii', 'ignore'), country.encode('ascii', 'ignore'))
     else:
